@@ -1,0 +1,17 @@
+name: Test Self Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Test local runner
+        shell: powershell
+        run: |
+          Write-Host "GitHub Action is running on my local Windows machine"
+          hostname
+          whoami
+          dotnet --info
