@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">App Secrets</h1>
+    <dl>
+        @foreach (KeyValuePair<string, string> entry in ViewBag.EnvironmentVars)
+        {
+            <dd>
+                <strong>@entry.Key:</strong>
+            </dd>
+            <dd>
+                @entry.Value
+            </dd>
+        }
+       
+    </dl>
+</div>
